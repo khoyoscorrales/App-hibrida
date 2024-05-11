@@ -7,6 +7,25 @@
     android:layout_height="match_parent"
     android:background="@color/my_primary"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".SplashActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notes Pro"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+
+    <ProgressBar
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:indeterminateTint="@color/white"
+        android:layout_margin="16dp"
+        />
+
 
 </LinearLayout>
