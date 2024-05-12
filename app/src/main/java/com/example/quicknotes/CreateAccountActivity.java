@@ -42,14 +42,15 @@ public class CreateAccountActivity extends AppCompatActivity {
         loginBtnTextView.setOnClickListener(v -> finish());
     }
 
-    private void createAccount() {
+    void createAccount() {
         String email = emailEditText.getText().toString();
         String password = passwordEditText.getText().toString();
         String confirmPassword = confirmPasswordEditText.getText().toString();
         boolean isValidated = validateData(email, password, confirmPassword);
         if (isValidated) {
-            createAccountInFirebase(email, password);
+            return;
         }
+        createAccountInFirebase(email, password);
     }
 
     void createAccountInFirebase(String email, String password) {
