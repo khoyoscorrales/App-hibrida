@@ -60,6 +60,7 @@ public class CreateAccountActivity extends AppCompatActivity {
                 new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        changeInProgress(false);
                         if(task.isSuccessful()){
                             //creating acc is done
                             Toast.makeText(CreateAccountActivity.this,"Succesfully create account, Che email to verify",Toast.LENGTH_SHORT).show();
