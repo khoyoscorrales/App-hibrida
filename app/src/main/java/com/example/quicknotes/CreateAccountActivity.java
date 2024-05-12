@@ -35,8 +35,8 @@ public class CreateAccountActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password_edit_text);
         confirmPasswordEditText = findViewById(R.id.confirm_password_edit_text);
         createAccountBtn = findViewById(R.id.Create_account);
-        loginBtnTextView = findViewById(R.id.login_text_view_btn);
         progressBar = findViewById(R.id.progress_bar);
+        loginBtnTextView = findViewById(R.id.login_text_view_btn);
 
         createAccountBtn.setOnClickListener(v -> createAccount());
         loginBtnTextView.setOnClickListener(v -> finish());
