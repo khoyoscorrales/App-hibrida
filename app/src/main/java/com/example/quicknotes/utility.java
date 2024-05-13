@@ -18,10 +18,12 @@ public class utility {
 
     static CollectionReference getCollectionReferenceForNotes(){
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-        return FirebaseFirestore.getInstance().collection("notes").document(currentUser.getUid()).collection("my_notes");
+        return FirebaseFirestore.getInstance().collection("notes")
+                .document(currentUser.getUid()).collection("my_notes");
     }
 
     static String timestampToString(Timestamp timestamp){
-        return new SimpleDateFormat("MM/DD/YYYY").format(timestamp.toDate());
+        return new SimpleDateFormat("MM/dd/yyyy").format(timestamp.toDate());
     }
+
 }
