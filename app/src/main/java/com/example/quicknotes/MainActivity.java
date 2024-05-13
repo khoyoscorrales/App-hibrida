@@ -18,6 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton addNoteBtn;
+    RecyclerView recyclerView;
+    ImageButton menuBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         addNoteBtn = findViewById(R.id.add_note_btn);
+        recyclerView = findViewById(R.id.recycler_view);
+        menuBtn = findViewById(R.id.menu_btn);
 
         addNoteBtn.setOnClickListener((v)-> startActivity(new Intent(MainActivity.this,NoteDetailsActivity.class)) );
+        menuBtn.setOnClickListener((v)->showMenu());
+        setupRecyclerView();
     }
+
+    void showMenu(){
+        //TODO Display menu
+
+    }
+
+    void setupRecyclerView(){
+
+    }
+
 }
