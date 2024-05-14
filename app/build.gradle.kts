@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.auth)
+    implementation(libs.ext.junit)
     testImplementation(libs.junit)
 }
 

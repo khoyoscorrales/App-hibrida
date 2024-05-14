@@ -1,29 +1,24 @@
 package com.example.quicknotes;
+
 import android.content.Context;
 import android.content.Intent;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
-import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import io.grpc.okhttp.internal.Util;
 
 
-
-public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.NoteViewHolder{
+public class NoteAdapter {
 
     Context context;
 
-    public NoteAdapter(@NonNull FirestoreRecyclerOptions<Note> options, Context context) {
-        super(options);
+    /*public NoteAdapter(@NonNull FirestoreRecyclerOptions<Note> options, Context context) {
+        super();
         this.context = context;
-    }
+    }*/
 
 
     protected void onBindViewHolder(@NonNull NoteViewHolder holder, int position, @NonNull Note note) {
@@ -31,16 +26,16 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.Note
         holder.contentTextView.setText(note.content);
         holder.timestampTextView.setText(utility.timestampToString(note.timestamp));
 
-        holder.itemView.setOnClickListener((v)->{
-            Intent intent = new Intent(context,NoteDetailsActivity.class);
-            intent.putExtra("title",note.title);
-            intent.putExtra("content",note.content);
-            String docId = this.getSnapshot().getSnapshot(position).getId();
-            intent.putExtra("docId",docId);
+        holder.itemView.setOnClickListener((v) -> {
+            Intent intent = new Intent(context, NoteDetailsActivity.class);
+            intent.putExtra("title", note.title);
+            intent.putExtra("content", note.content);
+            //String docId = getSnapshots().getSnapshot(position).getId(); //
+            //intent.putExtra("docId", docId);
             context.startActivity(intent);
         });
-
     }
+
 
 
 
@@ -49,6 +44,8 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.Note
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_note_item, parent, false);
         return new NoteViewHolder(view);
     }
+
+
 
     static class NoteViewHolder extends RecyclerView.ViewHolder {
         TextView titleTextView, contentTextView, timestampTextView;
