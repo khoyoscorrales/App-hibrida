@@ -1,5 +1,7 @@
 package com.example.quicknotes;
 
+import static com.google.firebase.database.DatabaseKt.getSnapshots;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,15 +12,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
-public class NoteAdapter {
+
+public class NoteAdapter extends RecyclerView.Adapter {
 
     Context context;
 
-    /*public NoteAdapter(@NonNull FirestoreRecyclerOptions<Note> options, Context context) {
+    public NoteAdapter(@NonNull FirestoreRecyclerOptions<Note> options, Context context) {
         super();
         this.context = context;
-    }*/
+    }
 
 
     protected void onBindViewHolder(@NonNull NoteViewHolder holder, int position, @NonNull Note note) {
@@ -31,7 +35,7 @@ public class NoteAdapter {
             intent.putExtra("title", note.title);
             intent.putExtra("content", note.content);
             //String docId = getSnapshots().getSnapshot(position).getId(); //
-            //intent.putExtra("docId", docId);
+            intent.putExtra("docId", 1);
             context.startActivity(intent);
         });
     }
@@ -45,6 +49,15 @@ public class NoteAdapter {
         return new NoteViewHolder(view);
     }
 
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
 
 
     static class NoteViewHolder extends RecyclerView.ViewHolder {

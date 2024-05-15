@@ -49,6 +49,11 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.auth)
     implementation(libs.ext.junit)
+    implementation(libs.firebase.database)
+    implementation(libs.firebase.ui.database)
+    implementation(libs.firebase.ui.firestore)
+    implementation(libs.firebase.ui.auth)
+    implementation(libs.firebase.ui.storage)
     testImplementation(libs.junit)
 }
 
