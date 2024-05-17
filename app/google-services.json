@@ -7,9 +7,66 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:168179216608:android:67b0d03bb16605171ba085",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3_DxFxykWXAXqHwo9FXAxlHd7nAJ6C1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:168179216608:android:89129fe9151030821ba085",
         "android_client_info": {
           "package_name": "com.example.quicknotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3_DxFxykWXAXqHwo9FXAxlHd7nAJ6C1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168179216608:android:ae62d03d0465b9ba1ba085",
+        "android_client_info": {
+          "package_name": "com.laura.notespro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3_DxFxykWXAXqHwo9FXAxlHd7nAJ6C1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168179216608:android:f0bc4fde437514161ba085",
+        "android_client_info": {
+          "package_name": "com.laurac.notespro"
         }
       },
       "oauth_client": [],
